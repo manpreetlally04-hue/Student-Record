@@ -1,0 +1,85 @@
+[
+  {
+    "id": "audit-1794317297140-dvysd",
+    "timestamp": "2026-11-10T13:28:17.140Z",
+    "action": "IMPORT",
+    "target": "students table",
+    "details": "Batch CSV import completed: 2 inserted, 0 updated, 0 skipped out of 2 records.",
+    "sqlQuery": "-- MySQL Workbench Batch Import (2 inserted, 0 updated, 0 skipped)\nINSERT INTO `students` (`id`, `student_id`, `full_name`, `email`, `phone`, `department`, `semester`, `gpa`, `enrollment_date`, `status`, `address`, `emergency_contact`, `created_at`, `updated_at`)\nVALUES\n(10, 'STU-CSV-01', 'Grace Hopper', 'grace.h@university.edu', '+1 (555) 000-0000', 'Computer Science', 3, 3.96, '2026-11-10', 'Active', 'Campus Dormitory Block B', 'Guardian', NOW(), NOW()),\n(11, 'STU-CSV-02', 'Alan Turing', 'alan.t@university.edu', '+1 (555) 000-0000', 'Data Science', 4, 4.00, '2026-11-10', 'Active', 'Campus Dormitory Block B', 'Guardian', NOW(), NOW());\n",
+    "secretKeyUsed": true,
+    "success": true
+  },
+  {
+    "id": "audit-1794317292137-l4pma",
+    "timestamp": "2026-11-10T13:28:12.137Z",
+    "action": "IMPORT",
+    "target": "students table",
+    "details": "Failed CSV batch-insert attempt for 1 records: Invalid secret key.",
+    "sqlQuery": "-- REJECTED: Invalid Secret Key for CSV batch import",
+    "secretKeyUsed": false,
+    "success": false
+  },
+  {
+    "id": "audit-1794317240524-76g43",
+    "timestamp": "2026-11-10T13:27:20.524Z",
+    "action": "INSERT",
+    "target": "students (id: 9)",
+    "studentId": "STU-2025-584",
+    "details": "Added new student: Jotsaroop Singh (STU-2025-584) in Computer Science",
+    "sqlQuery": "INSERT INTO `students` (`id`, `student_id`, `full_name`, `email`, `phone`, `department`, `semester`, `gpa`, `enrollment_date`, `status`, `address`, `emergency_contact`, `created_at`, `updated_at`)\nVALUES (9, 'STU-2025-584', 'Jotsaroop Singh', 'ghiewhrfuewh@gmail.com', '+919865327458', 'Computer Science', 5, 3.50, '2026-11-10', 'Active', 'Campus Dormitory Block B', 'Parent / Guardian (+1 555-111-2233)', NOW(), NOW());",
+    "secretKeyUsed": false,
+    "success": true
+  },
+  {
+    "id": "audit-1794317154125-u54xk",
+    "timestamp": "2026-11-10T13:25:54.125Z",
+    "action": "UPDATE",
+    "target": "students (id: 5)",
+    "studentId": "STU-2024-005",
+    "details": "Modified record for Manpreet Singh. Remark: Standard administrative record update",
+    "sqlQuery": "UPDATE `students`\nSET `student_id` = 'STU-2024-005',\n    `full_name` = 'Manpreet Singh',\n    `email` = 'manpreet.s@university.edu',\n    `phone` = '+1 (555) 678-9012',\n    `department` = 'Computer Science',\n    `semester` = 7,\n    `gpa` = 3.90,\n    `enrollment_date` = '2021-08-15',\n    `status` = 'Active',\n    `address` = '90 Greenfield Ave',\n    `emergency_contact` = 'Harpreet Singh (+1 555-777-9900)',\n    `updated_at` = NOW()\nWHERE `id` = 5;",
+    "secretKeyUsed": true,
+    "success": true
+  },
+  {
+    "id": "audit-1794315216290-2s6xv",
+    "timestamp": "2026-11-10T12:53:36.290Z",
+    "action": "SQL_EXECUTE",
+    "target": "SQL Query Console",
+    "details": "Executed: SELECT department, count(*) FROM students GROUP BY department;",
+    "sqlQuery": "SELECT department, count(*) FROM students GROUP BY department;",
+    "secretKeyUsed": false,
+    "success": true
+  },
+  {
+    "id": "audit-1794315209782-lmph5",
+    "timestamp": "2026-11-10T12:53:29.782Z",
+    "action": "UPDATE",
+    "target": "students (id: 1)",
+    "studentId": "STU-2024-001",
+    "details": "Modified record for Aarav Sharma Updated. Remark: Direct update via portal",
+    "sqlQuery": "UPDATE `students`\nSET `student_id` = 'STU-2024-001',\n    `full_name` = 'Aarav Sharma Updated',\n    `email` = 'aarav.sharma@university.edu',\n    `phone` = '+1 (555) 234-5678',\n    `department` = 'Computer Science',\n    `semester` = 6,\n    `gpa` = 3.85,\n    `enrollment_date` = '2022-08-20',\n    `status` = 'Active',\n    `address` = '42 Campus View Drive, Suite 3B',\n    `emergency_contact` = 'Rajesh Sharma (+1 555-901-2345)',\n    `updated_at` = NOW()\nWHERE `id` = 1;",
+    "secretKeyUsed": true,
+    "success": true
+  },
+  {
+    "id": "audit-1794315205796-myzre",
+    "timestamp": "2026-11-10T12:53:25.796Z",
+    "action": "UPDATE",
+    "target": "students (id: 1)",
+    "details": "Failed update attempt: Invalid secret key provided.",
+    "sqlQuery": "-- REJECTED: Invalid Secret Key",
+    "secretKeyUsed": false,
+    "success": false
+  },
+  {
+    "id": "audit-init-001",
+    "timestamp": "2026-11-10T12:53:17.767Z",
+    "action": "IMPORT",
+    "target": "students table",
+    "details": "Database initialized with standard schema and sample seed records.",
+    "sqlQuery": "CREATE TABLE `students` (...); INSERT INTO `students` VALUES (...);",
+    "secretKeyUsed": true,
+    "success": true
+  }
+]

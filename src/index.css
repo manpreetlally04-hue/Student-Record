@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #31333F;
+    background-color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'Source Code Pro', Consolas, Monaco, "Courier New", monospace;
+  }
+}
+
+/* Streamlit Accent Colors */
+:root {
+  --st-primary: #FF4B4B;
+  --st-primary-hover: #E03E3E;
+  --st-secondary-bg: #F0F2F6;
+  --st-dark-bg: #0E1117;
+  --st-sidebar-bg: #F8F9FB;
+  --st-text-color: #31333F;
+  --st-border-color: #E6EAF1;
+}
+
+/* Custom scrollbars like Streamlit */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f3f7;
+}
+::-webkit-scrollbar-thumb {
+  background: #cfd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #adb8cc;
+}
+
+/* Streamlit style code block */
+.st-code-block {
+  background-color: #F8F9FB;
+  border: 1px solid #E6EAF1;
+  border-radius: 6px;
+  font-family: 'Source Code Pro', monospace;
+}
+
+/* Pulse animation for Streamlit running indicator */
+@keyframes st-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.15);
+  }
+}
+
+.st-running-dot {
+  animation: st-pulse 1.8s infinite ease-in-out;
+}
